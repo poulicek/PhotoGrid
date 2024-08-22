@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jana</title>
+    <style>
+        html {background-color: #555555;}
+        body {box-sizing: border-box; margin: 20px auto; background: white; padding: 6.35mm;}
+        table {width: 100%; height: 100%; border-collapse: collapse; border: 0;}
+        td {background-position: center center; background-size: cover; border: 1mm solid white;}
+
+        .A1 {width: 23.4in; height: 33.1in;}
+        .A2 {width: 16.5in; height: 23.4in;}
+        .A3 {width: 11.7in; height: 16.5in;}
+        .A4 {width:  8.3in; height: 11.7in;}
+
+        #frame {box-sizing: border-box; width: 100%; height: 100%;}
+        
+        #margin {--pageMargin: 6mm; --trimSize: calc(0.7 * var(--pageMargin));}
+        #margin {width: 100%; height: 100%; box-sizing: border-box; position: relative;}
+        #margin .trimMark {display: none; width: 1px; height: 1px; position: absolute; background: black;}
+
+        #margin.showTrimMarks {padding: var(--pageMargin);}
+        #margin.showTrimMarks .trimMark {display: block;}
+        #margin.showTrimMarks #frame {padding: 3mm;}
+        #margin.showTrimMarks #frame.frameBorder {border: 1px dotted #e0e0e0;}
+
+        #margin #trimTopLeft {top: 0; height: var(--trimSize);}
+        #margin #trimTopRight {top: 0; height: var(--trimSize); right: var(--pageMargin);}
+        #margin #trimLeftTop {left: 0; width: var(--trimSize);}
+        #margin #trimRightTop {right: 0; width: var(--trimSize);}
+
+        #margin #trimBottomLeft {bottom: 0; height: var(--trimSize);}
+        #margin #trimBottomRight {bottom: 0; height: var(--trimSize); right: var(--pageMargin);}
+        #margin #trimLeftBottom {left: 0; width: var(--trimSize); bottom: var(--pageMargin);}
+        #margin #trimRightBottom {right: 0; width: var(--trimSize); bottom: var(--pageMargin);}
+
+        @media print {
+            html {background: none;}
+            body {background: none; margin: 0px;}
+            #margin.showTrimMarks #frame.frameBorder {border: 0px;}
+        }
+  </style>
+</head>
+<body class="A3">
+    <div id="margin" class="showTrimMarks">
+        <div id="trimTopLeft" class="trimMark"></div>
+        <div id="trimTopRight" class="trimMark"></div>
+        <div id="trimLeftTop" class="trimMark"></div>
+        <div id="trimRightTop" class="trimMark"></div>
+
+        <div id="frame" class="frameBorder">
+            <table>
+                <tr>
+                    <td style="background-image: url('photo/001.jpg');background-position-x: 35%;"></td>
+                    <td style="background-image: url('photo/002.jpg');background-position-x: 60%;"></td>
+                    <td style="background-image: url('photo/003.jpg')"></td>
+                    <td style="background-image: url('photo/004.jpg')"></td>
+                </tr>
+                <tr>
+                    <td style="background-image: url('photo/005.jpg')"></td>
+                    <td style="background-image: url('photo/006.jpg')"></td>
+                    <td style="background-image: url('photo/007.jpg')"></td>
+                    <td style="background-image: url('photo/008.jpg');background-position-x: 20%;"></td>
+                </tr>
+                <tr>
+                    <td style="background-image: url('photo/009.jpg')"></td>
+                    <td style="background-image: url('photo/010.jpg')"></td>
+                    <td style="background-image: url('photo/011.jpg')"></td>
+                    <td style="background-image: url('photo/012.jpg')"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="trimBottomLeft" class="trimMark"></div>
+        <div id="trimBottomRight" class="trimMark"></div>
+        <div id="trimLeftBottom" class="trimMark"></div>
+        <div id="trimRightBottom" class="trimMark"></div>
+    </div>
+</body>
+
+</html>
